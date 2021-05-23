@@ -1,4 +1,4 @@
-title: Your awesome title
+title: wahn34 Blog
 author: wahn34
 email: fbdhks34@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
@@ -25,9 +25,9 @@ plainwhite:
     - post
   # generate social links in footer
   social_links:
-    twitter: samarsault
+    # twitter: samarsault
     github:  wahn34
-    linkedIn: in/samarsault
+    # linkedIn: in/samarsault
     #rss: rss
     #dribbble: jekyll
     #flickr:   jekyll
