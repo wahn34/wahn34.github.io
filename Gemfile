@@ -2,7 +2,16 @@
 
 # gem "jekyll-theme-chirpy"
 
+gem "jekyll", ">=3.8.6"
+
 source "https://rubygems.org"
+
+# Official Plugins
+group :jekyll_plugins do
+  gem "jekyll-paginate"
+  gem "jekyll-redirect-from"
+  gem "jekyll-seo-tag", "~> 2.7.1"
+end
 
 gemspec
 
