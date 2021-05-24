@@ -1,36 +1,60 @@
 ---
 layout: post
-title:  "코테 준비 파이썬"
-description: 코테 준비 Python 
-date:   2021-05-21 01:08:00 +0900
-categories: Python 
+title:  "완주하지 못한 선수 Python"
+description: 프로그래머스 > 해시 > 완주하지 못한 선수
+date:   2021-05-24 21:08:00 +0900
+categories: Python
 ---
-## 자주 사용하는 라이브러리  
+수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.
+
+마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열 completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.
+
+##### 제한사항
+
+-   마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.
+-   completion의 길이는 participant의 길이보다 1 작습니다.
+-   참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.
+-   참가자 중에는 동명이인이 있을 수 있습니다.
+
+
+##### 입출력 예
+
+|participant|completion|return|
+|---|---|---|
+|["leo", "kiki", "eden"]|["eden", "kiki"]|"leo"
+|["marina", "josipa", "nikola", "vinko", "filipa"]|["josipa", "filipa", "marina", "nikola"]|"vinko"|
+|["mislav", "stanko", "mislav", "ana"]|["stanko", "ana", "mislav"]|"mislav"|
+
+
+##### 입출력 예 설명
+
+예제 #1  
+"leo"는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.
+
+예제 #2  
+"vinko"는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.
+
+예제 #3  
+"mislav"는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 한 명밖에 없기 때문에 한명은 완주하지 못했습니다.
+
+문제 출처 [프로그래머스]
+
+
+[프로그래머스]: https://programmers.co.kr/learn/courses/30/lessons/42576
+
+
+
+### 풀이
+
+'단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.' 라는 조건이 있었기 때문에, 참여자 명단과 완주자 명단을 비교하여 다른 한 명만 보여주면 되는 문제로 파악했습니다.
+
+참여자 명단, 완주자 명단을 정렬 시킨 후 collections.Counter를 이용하여 요소를 비교, 다른 요소만 출력하여 문제를 해결했습니다.
+
 ```python
-collections #import collections
-math  #import math
+import collections
+def solution(participant, completion):
+    participant.sort()
+    completion.sort()
+    answer = list(collections.Counter(participant) - collections.Counter(completion))
+    return answer[0]
 ```
-
-## 리스트  
-```python
-a=[1, 2]
-len(a) #길이
-a.sort() #sort
-a.append(3) #마지막에 추가 복잡도1
-a.insert(1, 5) #insert(index, value) 복잡도N
-```
-
-## 튜플 자료형  
-```python
-b = (1, 2, 3) #리스트와 다르게 수정 불가
-list(b) #list로 변환
-```
-
-
-## 반복문을 통한 리스트 접근  
-```python
-for i in a:
-	print(i)
-```
-
-# 공부하면서 수정 중!
