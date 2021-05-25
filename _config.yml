@@ -1,4 +1,4 @@
-title: 완이 블로그
+title: 완이
 description: Developer
 author: wahn34
 avatar: /logo.png
@@ -29,15 +29,9 @@ exclude:
 
 # Jekyll SEO Tag (Optional)
 # =========================
-#twitter:
-#  username: ngzhio
-#  card: summary
 logo: logo.png
 social:
   name: wahn34
   links:
-#    - https://twitter.com/ngzhio
-#    - https://www.facebook.com/ngzhio
     - https://github.com/wahn34
-#google_site_verification: 
 lang: en
