@@ -8,7 +8,7 @@ categories: SQL MySQL
 
 #### 문제 설명  (공통)
 `ANIMAL_INS` 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다. `ANIMAL_INS` 테이블 구조는 다음과 같으며, `ANIMAL_ID`, `ANIMAL_TYPE`, `DATETIME`, `INTAKE_CONDITION`, `NAME`, `SEX_UPON_INTAKE`는 각각 동물의 아이디, 생물 종, 보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.
-
+  
 |NAME|TYPE|NULLABLE|
 |---|---|---|
 |ANIMAL_ID|VARCHAR(N)|FALSE|
@@ -27,7 +27,7 @@ categories: SQL MySQL
 ##### 예시
 
 예를 들어  `ANIMAL_INS`  테이블이 다음과 같다면  
-
+  
 |ANIMAL_ID|ANIMAL_TYPE|DATETIME|INTAKE_CONDITION|NAME|SEX_UPON_INTAKE|
 |---|---|---|---|---|---|
 |A373219|Cat|2014-07-29 11:43:00|Normal|Ella|Spayed Female|
@@ -35,7 +35,7 @@ categories: SQL MySQL
 |A354540|Cat|2014-12-11 11:48:00|Normal|Tux|Neutered Male|
 
 고양이는 2마리, 개는 1마리 들어왔습니다. 따라서 SQL문을 실행하면 다음과 같이 나와야 합니다.
-
+  
 |ANIMAL_ID|count|
 |---|---|
 |Cat|2|
@@ -73,7 +73,7 @@ ORDER BY ANIMAL_TYPE
 ##### 예시
 
 예를 들어  `ANIMAL_INS`  테이블이 다음과 같다면  
-
+  
 |ANIMAL_ID|ANIMAL_TYPE|DATETIME|INTAKE_CONDITION|NAME|SEX_UPON_INTAKE|
 |---|---|---|---|---|---|
 |A396810|Dog|2016-08-22 16:13:00|Injured|Raven|Spayed Female|
@@ -87,7 +87,7 @@ ORDER BY ANIMAL_TYPE
 -   Lucy 이름은 3번 쓰였습니다
 -   Shadow 이름은 1번 쓰였습니다.  
 
-따라서 SQL문을 실행하면 다음과 같이 나와야 합니다.
+따라서 SQL문을 실행하면 다음과 같이 나와야 합니다.  
 |NAME|COUNT|Lucy|
 |---|---|---|
 |3|Raven|2|
@@ -122,7 +122,7 @@ ORDER BY NAME
 
 ##### 예시
 
-SQL문을 실행하면 다음과 같이 나와야 합니다.
+SQL문을 실행하면 다음과 같이 나와야 합니다.  
 |HOUR|COUNT|
 |---|---|
 |9|1|
@@ -167,7 +167,7 @@ ORDER BY HOUR(DATETIME)
 
 ##### 예시
 
-SQL문을 실행하면 다음과 같이 나와야 합니다.
+SQL문을 실행하면 다음과 같이 나와야 합니다.  
 |HOUR|COUNT|
 |---|---|
 |0|0|
