@@ -169,7 +169,9 @@ COUNT(컬럼)은 NULL을 제외하고 COUNT
 
 ##### 예시
 
-예를 들어  `ANIMAL_INS`  테이블이 다음과 같다면
+예를 들어  `ANIMAL_INS`  테이블이 다음과 같다면  
+
+
 |ANIMAL_ID|ANIMAL_TYPE|DATETIME|INTAKE_CONDITION|NAME|SEX_UPON_INTAKE|
 |---|---|---|---|---|---|
 |A562649|Dog|2014-03-20 18:06:00|Sick|NULL|Spayed Female|
