@@ -3,6 +3,7 @@ layout: post
 title:  "SQL GROUP BY"
 description: 프로그래머스 코딩테스트 연습 GROUP BY
 date:   2021-05-29 23:40:00 +0900
+tags: SQL MySQL
 categories: SQL MySQL
 ---
 

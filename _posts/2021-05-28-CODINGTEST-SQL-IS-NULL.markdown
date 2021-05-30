@@ -3,6 +3,7 @@ layout: post
 title:  "SQL IS NULL"
 description: 프로그래머스 코딩테스트 연습 IS NULL
 date:   2021-05-28 22:33:00 +0900
+tags: SQL MySQL
 categories: SQL MySQL
 ---
 ## 이름이 없는 동물의 아이디  

@@ -3,6 +3,7 @@ layout: post
 title:  "완주하지 못한 선수 Python"
 description: 프로그래머스 > 해시 > 완주하지 못한 선수
 date:   2021-05-24 21:08:00 +0900
+tags: Python
 categories: Python
 ---
 수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.

@@ -3,6 +3,7 @@ layout: post
 title:  "K번째수 Python"
 description: 프로그래머스 > 정렬 > K번째수
 date:   2021-05-26 23:45:00 +0900
+tags: Python
 categories: Python
 ---
 ###### 문제 설명

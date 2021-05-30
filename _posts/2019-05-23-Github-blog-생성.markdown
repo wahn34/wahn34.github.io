@@ -3,6 +3,7 @@ layout: post
 title:  "Github blog 생성"
 description: jekyll theme를 이용한 Github Blog 생성
 date:   2021-05-19 18:16:36 +0900
+tags: Blog jekyll
 categories: Blog jekyll
 ---
 

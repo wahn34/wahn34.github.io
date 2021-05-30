@@ -3,6 +3,7 @@ layout: post
 title:  "코테 준비 파이썬"
 description: 코테 준비 Python 
 date:   2021-05-21 01:08:00 +0900
+tags: Python 
 categories: Python 
 ---
 ## 자주 사용하는 라이브러리  
