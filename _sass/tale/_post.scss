@@ -3,7 +3,6 @@
 
   &-info {
     color: $default-tint;
-    font-family: $serif-secondary;
     letter-spacing: 0.5px;
     text-align: center;
 
@@ -14,7 +13,6 @@
 
   &-title {
     color: $default-shade;
-    font-family: $sans-serif;
     font-size: 4rem;
     margin: 1rem 0;
     text-align: center;
@@ -43,7 +41,6 @@
   img + em {
     color: $default-tint;
     display: block;
-    font-family: $sans-serif;
     font-size: 0.9rem;
     font-style: normal;
     text-align: center;
@@ -57,6 +54,7 @@
   th, td {
     border-bottom: 1px solid #616060;
     padding: 10px;
+    text-align: center;
   }
 
   // CSS for making emoji inline
