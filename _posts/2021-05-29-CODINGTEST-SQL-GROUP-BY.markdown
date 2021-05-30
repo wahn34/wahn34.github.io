@@ -88,6 +88,8 @@ ORDER BY ANIMAL_TYPE
 -   Shadow 이름은 1번 쓰였습니다.  
 
 따라서 SQL문을 실행하면 다음과 같이 나와야 합니다.  
+
+
 |NAME|COUNT|Lucy|
 |---|---|---|
 |3|Raven|2|
@@ -123,6 +125,8 @@ ORDER BY NAME
 ##### 예시
 
 SQL문을 실행하면 다음과 같이 나와야 합니다.  
+
+
 |HOUR|COUNT|
 |---|---|
 |9|1|
@@ -168,6 +172,8 @@ ORDER BY HOUR(DATETIME)
 ##### 예시
 
 SQL문을 실행하면 다음과 같이 나와야 합니다.  
+
+
 |HOUR|COUNT|
 |---|---|
 |0|0|
