@@ -1,5 +1,5 @@
 ---
-title:  REST API 구현하기
+title:  API 구현하기
 author: wahn
 date:   2021-06-06 18:31:17 +0900
 categories: [PROJECT]
@@ -7,7 +7,7 @@ tags: [private project]
 pin: true
 ---
 
-#### REST API 구현하기
+### REST API 구현하기
 Spring Framework 기반에서 REST API를 구현해본 적이 있다.   
 처음에는 이게 되나 싶은 생각에 Controller에 구현되어있는 ajax에 Swift Alamofire 를 사용해 호출해보았었는데 잘 되었다.  
 그래서 ajax의 로직을 그대로 따라가며 GET, POST, PUT, DELETE METHOD만 추가하여 따로 API URI를 만들었고, 결과적으로 모바일 앱, 웹에서 사용할 수 있는 하나의 서비스가 구현되었다.  
@@ -16,6 +16,7 @@ Spring Framework 기반에서 REST API를 구현해본 적이 있다.
 이번에는 Spring Boot 기반으로 REST API를 해보려 한다.    
 일정을 등록할 수 있는 FRK_SCHEDULE TABLE을 생성했다.  
 
+### 테이블 생성
 ```sql
 CREATE TABLE IF NOT EXISTS FRK_SCHEDULE (
        SCHDUL_SEQ			INT					NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -23,15 +24,20 @@ CREATE TABLE IF NOT EXISTS FRK_SCHEDULE (
        SCHDUL_NM			VARCHAR(20)			NOT NULL,
        USE_YN				VARCHAR(1)			NOT NULL DEFAULT('Y'),
        SHOW_YN				VARCHAR(1)			NOT NULL DEFAULT('Y')
-);
+);  
+
 ```
 다른 테이블도 생성하여 JOIN하여 다른 사람들과 공유 등의 기능을 구현해나갈 예정이지만, 우선 SPRING JPA, REST API를 경험해보기 위해 하나의 테이블만 먼저 생성했다.  
 
+### Class 생성  
+
+
 테이블명과 동일한 java class를 생성해준다.  
-* @Table(name = "") 테이블을 지정해줄 수 있기 때문에 무리할 필요는 없다.    
+* @Table(name = "") 테이블을 지정해줄 수 있기 때문에 무리할 필요는 없다.     
+
+
 ```java
 FrkSchedule.java
-
 @Getter
 @Setter
 @Entity
@@ -100,12 +106,19 @@ public class FrkSchedule {
 }
 ```
 
-``` java
+### CrudRepository  
+
+
+```java
 FrkScheduleRepository.java
 public interface FrkScheduleRepository extends CrudRepository<FrkSchedule, Long>{
 	
 }
-  ```
+```
+
+### Controller   
+
+
 
 ```java
 FrkScheduleController.java
@@ -130,7 +143,7 @@ public class FrkScheduleController {
 }
 ```
    
-CrudRepository의 메서드 및 기능  
+### CrudRepository의 메서드 및 기능  
 
 |메서드|기능|
 |---|---|
@@ -143,9 +156,18 @@ CrudRepository의 메서드 및 기능
 |count()|개수|
 
   
-GET : ip:포트/schedule에 들어가보면 FRK_SCHEDULE 테이블에 담겨져 있는 정보가 출력 된다.
-POST: IP:PORT/schedule?schdulNm=TEST1 을 하면 TEST1이라는 일정이 등록되고, 마찬가지로 GET을 통해 저장된 결과를 조회해볼 수 있었다.
+###  사용  
+*  POSTMAN을 사용해보면 쉽게 테스트할 수 있다.  
 
 
-JPA가 익숙하지 않아서 아직까지는 SpringFramework에서 사용하던 MyBatis로 구현하는 방식이 조금 더 편한 것 같다.  
+
+GET : ip:포트/schedule에 들어가보면 FRK_SCHEDULE 테이블에 담겨져 있는 정보가 출력 된다.  
+
+
+POST: IP:PORT/schedule?schdulNm=TEST1 을 하면 TEST1이라는 일정이 등록되고, 마찬가지로 GET을 통해 저장된 결과를 조회해볼 수 있었다.  
+
+###  후기  
+
+
+JPA가 익숙하지 않아서 아직까지는 SpringFramework에서 사용하던 MyBatis로 구현하는 방식이 조금 더 편한 것 같다.   
 다만, 쿼리를 작성하지 않아도 저장, 수정, 삭제가 이루어진다는 점은 되게 편했다.  
