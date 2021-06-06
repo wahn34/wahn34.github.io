@@ -19,11 +19,11 @@ Spring Framework 기반에서 REST API를 구현해본 적이 있다.
 ### 테이블 생성
 ```sql
 CREATE TABLE IF NOT EXISTS FRK_SCHEDULE (
-       SCHDUL_SEQ			INT					NOT NULL AUTO_INCREMENT PRIMARY KEY,
-       SCHDUL_UPPER_CD		VARCHAR(5)			,
-       SCHDUL_NM			VARCHAR(20)			NOT NULL,
-       USE_YN				VARCHAR(1)			NOT NULL DEFAULT('Y'),
-       SHOW_YN				VARCHAR(1)			NOT NULL DEFAULT('Y')
+       SCHDUL_SEQ		INT		NOT NULL AUTO_INCREMENT PRIMARY KEY,
+       SCHDUL_UPPER_CD	VARCHAR(5)	,
+       SCHDUL_NM		VARCHAR(20)	NOT NULL,
+       USE_YN		VARCHAR(1)	NOT NULL DEFAULT('Y'),
+       SHOW_YN		VARCHAR(1)	NOT NULL DEFAULT('Y')
 );  
 
 ```
@@ -35,6 +35,9 @@ CREATE TABLE IF NOT EXISTS FRK_SCHEDULE (
 테이블명과 동일한 java class를 생성해준다.  
 * @Table(name = "") 테이블을 지정해줄 수 있기 때문에 무리할 필요는 없다.     
 
+주의!  
+* 생성자가 있어야 한다  
+* Table 생성 시 DEFAULT('Y')로 했지만, 실제 INSERT가 일어날 때는 NULL 오류가 난다  
 
 ```java
 FrkSchedule.java

@@ -50,7 +50,9 @@ pin: true
 |A381217|Dog|2017-07-08 09:41:00|Sick|Cherokee|Neutered Male|
   
 
-`ANIMAL_OUTS`
+`ANIMAL_OUTS`  
+
+
 |ANIMAL_ID|ANIMAL_TYPE|DATETIME|NAME|SEX_UPON_OUTCOME|
 |---|---|---|---|---|
 |A350276|Cat|2018-01-28 17:51:00|Jewel|Spayed Female|
