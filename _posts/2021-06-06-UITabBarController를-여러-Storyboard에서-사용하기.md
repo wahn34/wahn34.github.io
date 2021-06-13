@@ -9,17 +9,18 @@ pin: true
 ## UITabBarController 추가   
 UITabBarController를 Storyboard에 추가하게 되면 기본적으로 UIViewController가 두개 딸려오게 된다.   
 이 UIViewController는 삭제하고, 원하는 UIViewController와 연결하여준다.
-![tabbar01](https://github.com/wahn34/wahn34.github.io/tree/master/images/tabbar01.png)
+![tabbar01](../images/tabbar01.png)
 
 
 ## UIViewController 추가  
 연결은 UITabBarController를 우클릭한 후, Triggered Segues에서 원하는 UIViewController를 view controllers로 추가한다.  
 이 방법은 매우 쉽고 빠르지만, 순서를 지정하기 어렵다는 것이 단점이다.   
-순서는 보기 옵션에서 코드 보기로 변경 후, Storyboard의 코드 순서를 바꾸면 되니 지금은 순서에 상관없이 연결해준다.  ![tabbar02](https://github.com/wahn34/wahn34.github.io/tree/master/images/tabbar02.png)
+순서는 보기 옵션에서 코드 보기로 변경 후, Storyboard의 코드 순서를 바꾸면 되니 지금은 순서에 상관없이 연결해준다.  
+![tabbar02](/images/tabbar02.png)
 
 단순히 연결해주는 것만으로도 Storyboard상 UITabBar에 아이콘과 해당 라벨이 추가되는 것을 확인할 수 있다.  
 시뮬레이션으로 확인해보아도 결과는 동일하다.   
-![tabbar03](https://github.com/wahn34/wahn34.github.io/tree/master/images/tabbar03.png)
+![tabbar03](./images/tabbar03.png)
 
 ## Storyboard Reference 추가  
 Application을 개발하다보면 하나의 Storyboard에 연속적으로 추가하는 것이 아니라, 여러 Storyboard로 나누어 작업하게 되는 경우가 많다.  
