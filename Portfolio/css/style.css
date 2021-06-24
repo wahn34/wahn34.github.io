@@ -44,6 +44,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	font-family: sans-serif;
+        -webkit-overflow-scrolling: touch;
 	/* outline: 10px solid hotpink; */
 	/* turn above on to see the edge of panels */
 }
