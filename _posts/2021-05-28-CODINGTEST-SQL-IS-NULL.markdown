@@ -4,7 +4,7 @@ author: wahn
 date:   2021-05-28 22:33:00 +0900
 categories: [SQL]
 tags: [coding test]
-pin: true
+pin: false
 ---
 
 ## 이름이 없는 동물의 아이디  

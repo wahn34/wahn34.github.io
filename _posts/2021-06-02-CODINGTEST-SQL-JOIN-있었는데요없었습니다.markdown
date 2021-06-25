@@ -4,7 +4,7 @@ author: wahn
 date:   2021-06-03 23:30:00 +0900
 categories: [SQL]
 tags: [coding test]
-pin: true
+pin: false
 ---
 
 ###### 문제 설명

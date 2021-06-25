@@ -4,7 +4,7 @@ author: wahn
 date:   2021-06-07 23:50:00 +0900
 categories: [Python]
 tags: [coding test]
-pin: true
+pin: false
 ---
 
 # Hello World

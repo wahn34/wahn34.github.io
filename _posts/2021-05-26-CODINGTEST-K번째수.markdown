@@ -4,7 +4,7 @@ author: wahn
 date:   2021-05-26 23:45:00 +0900
 categories: [Python]
 tags: [coding test]
-pin: true
+pin: false
 ---
 
 ###### 문제 설명

@@ -4,7 +4,7 @@ author: wahn
 date:   2021-06-14 02:59:00 +0900
 categories: [Python]
 tags: [coding test]
-pin: true
+pin: false
 ---
 
 # We love kriii

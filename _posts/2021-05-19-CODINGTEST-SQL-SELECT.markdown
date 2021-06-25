@@ -4,7 +4,7 @@ author: wahn
 date:   2021-05-19 18:22:00 +0900
 categories: [SQL]
 tags: [coding test]
-pin: true
+pin: false
 ---
 ## 모든 레코드 조회하기  
 
