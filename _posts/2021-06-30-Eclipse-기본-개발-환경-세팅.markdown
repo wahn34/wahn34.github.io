@@ -1,0 +1,66 @@
+---
+title:  Eclipse 기본 개발 환경 세팅 
+author: wahn
+date:   2021-06-30 20:30:00 +0900
+categories: [PROJECT]
+tags: [private project]
+pin: false
+---
+
+## SVN 설정  
+### SVN 설치  
+1. Eclipse 실행  
+2. Help  
+3. install new software  
+4. work with (http://download.eclipse.org/technology/subversive/4.0/update-site/ )
+5. 모두 체크, install  
+6. 설치완료, 재시작  
+
+### SVN 설정  
+1. window > show view > others > svn > svn repositories  
+2. New Repository Location (URL : svn://설치된 svn의 ip와 port)  
+3. Authentication(User: svn에 설정된 id, Password: svn에 설정된 pw)  
+4. 입력 후 Finish(save authentication에 체크 권장)  
+5. SVN Repositories 새로고침 (F5)  
+6. 프로젝트 우클릭 > checkout > 프로젝트 체크 > OK  
+
+### SVN 사용  
+##### SVN 히스토리    
+- 전체 히스토리  
+ 1. 프로젝트 우클릭  
+ 2. team > show history  
+ 3. 수정버전, 수정일자, 수정자, 수정내용 확인 가능  
+ 4. 클릭 시 현재 소스와 차이 비교  
+
+
+- 특정 히스토리  
+ 1. 특정 소스 우클릭  
+ 2. team > show history  
+
+##### commit & update
+1.  프로젝트 우클릭
+2. team > synchronize with repository
+검정 : 내가 수정한 소스
+파랑 : 내가 아닌 다른 사람이 수정한 소스
+빨강 : 서로가 수정해서 겹친 소스
+
+3. commit & update
+> 검정
+> 1. 우클릭
+> 2. commit
+> 3. comment: 수정한 내용 입력 후 OK
+
+
+> 파랑
+> 1. 우클릭
+> 2. update
+
+
+> 빨강
+> 1. 합치기
+> > 1. 더블 클릭
+> > 2. 화살표로 수정된 부분을 확인하며 수동으로 합침
+> > 3. override commit
+> 2. 가져오기
+> > 1. 우클릭
+> > 2. Override update
