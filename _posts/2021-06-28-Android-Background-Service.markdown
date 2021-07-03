@@ -29,7 +29,7 @@ Application의 구성 요소에서 bindService()를 통해 사용한다. 서비�
 
 
 아래와 같이 작동 방식을 설계했을 때, 사용 방법은 아래와 같다.
-![process1](/images/process1.png)
+![service1](/images/service1.png)
 
 
 ## 사용 
